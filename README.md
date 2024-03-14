@@ -85,7 +85,8 @@ httpd.serve_forever()
 
 ## OUTPUT:
 ![Screenshot 2024-03-14 144957](https://github.com/Rajaraman77/simplewebserver/assets/150319383/e4777c4a-dc00-4fe5-b3bc-da4f1fed79a1)
-![Uploading Screenshot 2024-03-14 145010.png…]()
+![image](https://github.com/Rajaraman77/simplewebserver/assets/150319383/d06a0bd3-1aff-4867-bd8c-32b6dd6e5285)
+
 
 
 ## RESULT:
