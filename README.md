@@ -1,5 +1,5 @@
 # EX01 Developing a Simple Webserver
-## Date:
+## Date:14-3-24
 
 ## AIM:
 To develop a simple webserver to serve html pages.
@@ -21,6 +21,7 @@ Serving the HTML pages.
 Testing the webserver.
 
 ## PROGRAM:
+```
 from http.server import HTTPServer,BaseHTTPRequestHandler
 
 content='''
@@ -30,43 +31,37 @@ content='''
 <title> My Web Server</title>
 </head>
 <body>
-<h1>Top Five Revenue from Companies</h1>
-<table border=2>
+<table border ="2" cellspacing ="10" cellpadding = "6" align = "Center">
+<caption> TOP FIVE REVENUE GENERATING SOFTWARE COMPANIES </caption>
 <tr>
-<th> Company Name</th>
-<th> Revenue</th>
-<th> Financial Year</th>
-</tr>
-
-<tr>
-<td> Micro Soft</td>
-<td> $86.6</td>
-<td> 2014</td>
+<th> S.No </th>
+<th> Company </th>
+<th> Revenue </th>
 </tr>
 <tr>
-<td> Micro Soft</td>
-<td> $86.6</td>
-<td> 2014</td>
+<td> 1. </td>
+<td> tcs </td>
+<td> 265 Billion </td>
 </tr>
 <tr>
-<td> Micro Soft</td>
-<td> $86.6</td>
-<td> 2014</td>
+<td> 2. </td>
+<td> HCL </td>
+<td> 29.6 Billion </td>
 </tr>
 <tr>
-<td> Micro Soft</td>
-<td> $86.6</td>
-<td> 2014</td>
+<td> 3. </td>
+<td> HP </td>
+<td> 29.1 Billion </td>
 </tr>
 <tr>
-<td> Micro Soft</td>
-<td> $86.6</td>
-<td> 2014</td>
+<td> 4. </td>
+<td> RIL </td>
+<td> 456 Billion </td>
 </tr>
 <tr>
-<td> Micro Soft</td>
-<td> $86.6</td>
-<td> 2014</td>
+<td> 5. </td>
+<td> OYO </td>
+<td> 5.6 Billion </td>
 </tr>
 </table>
 </body>
@@ -75,6 +70,7 @@ content='''
 
 class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
+
         print("Get request received...")
         self.send_response(200) 
         self.send_header("content-type", "text/html")       
@@ -85,9 +81,12 @@ print("This is my webserver")
 server_address =('',8000)
 httpd = HTTPServer(server_address,MyServer)
 httpd.serve_forever()
+```
 
 ## OUTPUT:
-![alt text](image.png)
+![Screenshot 2024-03-14 144957](https://github.com/Rajaraman77/simplewebserver/assets/150319383/e4777c4a-dc00-4fe5-b3bc-da4f1fed79a1)
+![Uploading Screenshot 2024-03-14 145010.png…]()
+
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
